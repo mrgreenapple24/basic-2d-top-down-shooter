@@ -1,7 +1,12 @@
 extends CharacterBody2D
 
 var speed = 3
+
 func _ready():
+	var tex := ModManager.get_texture("enemy", "res://Assets/enemy.png")
+	if tex and tex != $Sprite2D.texture:
+		$Sprite2D.texture = tex
+		$Sprite2D.modulate = Color(1, 1, 1, 1)
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -17,5 +22,6 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name != "wall" and body.name != "Player":
+		body.queue_free()
 		queue_free()
 	pass # Replace with function body.

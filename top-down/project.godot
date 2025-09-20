@@ -12,8 +12,14 @@ config_version=5
 
 config/name="top-down"
 run/main_scene="uid://c3bkd7p86dy4d"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Mods"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ModManager="*res://Scripts/ModManager.gd"
 
 [input]
 

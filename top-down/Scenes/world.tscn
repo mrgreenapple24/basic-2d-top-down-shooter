@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://c3bkd7p86dy4d"]
+[gd_scene load_steps=11 format=4 uid="uid://c3bkd7p86dy4d"]
 
-[ext_resource type="Texture2D" uid="uid://cxv2i37xyjcdb" path="res://Assets/square-16.png" id="1_a02cp"]
+[ext_resource type="Texture2D" uid="uid://bi87b5ul4icks" path="res://Assets/bg.png" id="1_5ukr8"]
 [ext_resource type="Script" uid="uid://dh3lfl36dhe85" path="res://Scripts/player.gd" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://bx3hbqfb1d8ah" path="res://Scenes/enemy.tscn" id="3_5a7ea"]
+[ext_resource type="Texture2D" uid="uid://c2uugl4v7ljke" path="res://Assets/player.png" id="3_5ukr8"]
 [ext_resource type="Texture2D" uid="uid://dwnxudhervbfs" path="res://Assets/light.png" id="3_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://cm3bt2bn60enm" path="res://tile.tscn" id="5_5ukr8"]
 
@@ -25,7 +26,7 @@ modulate = Color(0, 0.243137, 0.411765, 1)
 z_index = -1
 position = Vector2(624, 432)
 scale = Vector2(166.062, 101.875)
-texture = ExtResource("1_a02cp")
+texture = ExtResource("1_5ukr8")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(90, 104)
@@ -35,7 +36,7 @@ script = ExtResource("1_go701")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 modulate = Color(0.981664, 0.127199, 0.174653, 1)
-texture = ExtResource("1_a02cp")
+texture = ExtResource("3_5ukr8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_go701")
