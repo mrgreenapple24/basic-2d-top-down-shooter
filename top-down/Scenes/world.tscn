@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=4 uid="uid://c3bkd7p86dy4d"]
+[gd_scene load_steps=31 format=4 uid="uid://c3bkd7p86dy4d"]
 
 [ext_resource type="Texture2D" uid="uid://bi87b5ul4icks" path="res://Assets/bg.png" id="1_5ukr8"]
+[ext_resource type="Texture2D" uid="uid://bwexy6r30ftpg" path="res://Assets/67.png" id="1_7yui6"]
 [ext_resource type="Script" uid="uid://dh3lfl36dhe85" path="res://Scripts/player.gd" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://bx3hbqfb1d8ah" path="res://Scenes/enemy.tscn" id="3_5a7ea"]
 [ext_resource type="Texture2D" uid="uid://c2uugl4v7ljke" path="res://Assets/player.png" id="3_5ukr8"]
@@ -67,6 +68,13 @@ size = Vector2(16, 111)
 size = Vector2(112, 16)
 
 [node name="World" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.39215687, 0.08235294, 0.14509805, 1)
+z_index = -5
+position = Vector2(663.99994, 403.49997)
+scale = Vector2(138.49998, 84.6875)
+texture = ExtResource("1_7yui6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.243137, 0.411765, 1)
