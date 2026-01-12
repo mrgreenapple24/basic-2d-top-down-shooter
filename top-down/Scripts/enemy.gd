@@ -21,7 +21,7 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name != "wall" and body.name != "Player":
+	if body.name != "wall" and body.name != "Player" and not body.is_in_group("Obstacle"):
 		body.queue_free()
 		queue_free()
 	pass # Replace with function body.
