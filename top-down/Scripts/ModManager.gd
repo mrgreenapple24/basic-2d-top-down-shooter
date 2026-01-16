@@ -5,8 +5,10 @@ var mod_textures: Dictionary  = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(OS.get_user_data_dir())
 	if not DirAccess.dir_exists_absolute(MOD_TEXTURE_DIR):
 		DirAccess.make_dir_recursive_absolute(MOD_TEXTURE_DIR)
+		print("directory made")
 	get_viewport().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
 	scan_mod_textures()
 	pass # Replace with function body.
